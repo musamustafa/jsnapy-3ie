@@ -15,6 +15,6 @@ tests:
   - test_ospf_neighbor.yml
   - test_isis_adj.yml
   - test_bgp_neighbor.yml
-  - test_route_summary.yml
+  - test_route_summary_delta.yml
   - test_arp.yml
   - test_bfd.yml

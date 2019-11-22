@@ -1,4 +1,4 @@
-bgp-neighbor:
+arp:
 - command:  show arp
 - iterate:
     xpath: arp-table-entry

@@ -1,4 +1,4 @@
-test_interfaces_terse:
+test_ifl_terse:
  - command: show interfaces terse
  - iterate:
      id: ./name
