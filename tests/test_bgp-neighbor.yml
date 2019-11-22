@@ -1,0 +1,9 @@
+bgp-neighbor:
+- command:  show bgp summary
+- iterate:
+    xpath: bgp-peer
+    id: ./peer-address
+    tests:
+      - no-diff: peer-state
+        err: 'FAIL !! bgp neighbor on {{id_0}} was {{pre["peer-state"]}} and became {{post["peer-state"]}}'
+        info: 'Successbgp BGP neighbor on {{id_0}} is {{pre["peer-state"]}} with no change'

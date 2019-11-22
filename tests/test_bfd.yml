@@ -1,0 +1,14 @@
+bfd-sessions:
+- command:  show bfd session
+- iterate:
+    xpath: bfd-session
+    id: ./session-neighbor
+    tests:
+      - AND:
+        - no-diff: session-state
+          err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-state"]}} and became {{post["session-state"]}}'
+          info: 'all is ok'
+
+        - no-diff: session-detection-time
+          err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-detection-time"]}} and became {{pre["session-detection-time"]}}'
+          info: 'all is ok'

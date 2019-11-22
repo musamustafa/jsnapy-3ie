@@ -1,0 +1,6 @@
+hosts:
+  - device: dn2e9201
+
+
+tests:
+  - test_ospf_neighbor.yml

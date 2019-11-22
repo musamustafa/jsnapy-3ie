@@ -1,0 +1,9 @@
+ospf-neighbor:
+- command: show ospf neighbor instance all
+- iterate:
+    xpath: ospf-instance-neighbor/ospf-neighbor
+    id: interface-name
+    tests:
+      - no-diff: ospf-neighbor-state
+        err: 'FAIL !! OSPF neighbor on vrf {{pre["./../ospf-instance-name"]}} interface  {{post["interface-name"]}} to {{post["neighbor-id"]}} was {{pre["ospf-neighbor-state"]}} and became {{post["ospf-neighbor-state"]}}'
+        info: 'ALL OSPF neighbors in instance {{pre["./../ospf-instance-name"]}} interface {{pre["interface-name"]}} are the same'

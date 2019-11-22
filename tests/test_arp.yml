@@ -1,0 +1,9 @@
+bgp-neighbor:
+- command:  show arp
+- iterate:
+    xpath: arp-table-entry
+    id: ./mac-address
+    tests:
+      - no-diff: interface-name
+        err: 'FAIL !! {{id_0}} was on  {{pre["interface-name"]}} and moved to {{post["interface-name"]}}'
+        info: 'all is ok'

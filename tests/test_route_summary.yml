@@ -1,0 +1,25 @@
+route-summary:
+- command: show route summary
+- iterate:
+    xpath: route-table
+    id: ./table-name
+    tests:
+      - no-diff: active-route-count
+        err: 'FAIL !! active route count for {{id_0}}  was {{pre["active-route-count"]}} and became {{post["active-route-count"]}}'
+        info: 'Active route count for {{id_0}} is {{pre["active-route-count"]}} on both snapshots'
+        
+      - no-diff: destination-count
+        err: 'FAIL !! destination count for {{id_0}}  was {{pre["destination-count"]}} and became {{post["destination-count"]}}'
+        info: 'Destination route count for {{id_0}} is {{pre["destination-count"]}} on both snapshots'
+        
+      - no-diff: total-route-count
+        err: 'FAIL !! total route count for {{id_0}}  was {{pre["total-route-count"]}} and became {{post["total-route-count"]}}'
+        info: 'Total route count for {{id_0}} is {{pre["total-route-count"]}} on both snapshots'
+        
+      - no-diff: holddown-route-count
+        err: 'FAIL !! holddown route count for {{id_0}}  was {{pre["holddown-route-count"]}} and became {{post["holddown-route-count"]}}'
+        info: 'Holddown route count for {{id_0}} is {{pre["holddown-route-count"]}} on both snapshots'
+        
+      - no-diff: hidden-route-count
+        err: 'FAIL !! hidden route count for {{id_0}}  was {{pre["hidden-route-count"]}} and became {{post["hidden-route-count"]}}'
+        info: 'Hidden route count for {{id_0}} is {{pre["hidden-route-count"]}} on both snapshots'
