@@ -10,9 +10,11 @@ hosts:
 
 
 tests:
-  - test_is_equal.yml
-  - ospf-neighbor.yml
-  - isis-adj.yml
-  - bgp-neighbor.yml
-  - route.yml
+  - test_ifd_status.yml
+  - test_ifl_status.yml
+  - test_ospf_neighbor.yml
+  - test_isis_adj.yml
+  - test_bgp_neighbor.yml
+  - test_route_summary.yml
   - test_arp.yml
+  - test_bfd.yml
