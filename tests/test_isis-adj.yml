@@ -1,9 +1,0 @@
-isis-adj:
-- command:  show isis adjacency
-- iterate:
-    xpath: isis-adjacency
-    id: interface-name
-    tests:
-      - is-equal: adjacency-state, Up
-        err: 'FAIL !! ISIS adj on {{pre["interface-name"]}} to {{pre["neighboraddress"]}} changed from {{pre["adjacency-state"]}} to {{post["adjacency-state"]}}'
-        info: 'Success ISIS adjacency in interface {{pre["interface-name"]}} is the same'
