@@ -1,0 +1,9 @@
+class-of-service:
+- command: show interfaces queue
+- iterate:
+    xpath: queue
+    id: ./queue-number
+    tests:
+      - delta: queue-counters-total-drop-packets, 10
+        err: 'FAIL !! Total dropped packets on {{pre["./../../name"]}} queue number {{id_0}} changed by more that 10 percent'
+        info: 'Success, {{pre["./../../name"]}} queue number {{"id_0"}} total dropped packets did not change'

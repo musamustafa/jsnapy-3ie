@@ -3,4 +3,4 @@ hosts:
 
 
 tests:
-  - test_route_summary_delta.yml
+  - test_cos.yml

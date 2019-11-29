@@ -10,5 +10,5 @@ bfd-sessions:
           info: 'all is ok'
 
         - no-diff: session-detection-time
-          err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-detection-time"]}} and became {{pre["session-detection-time"]}}'
+          err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-detection-time"]}} and became {{post["session-detection-time"]}}'
           info: 'all is ok'
