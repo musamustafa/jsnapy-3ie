@@ -1,0 +1,10 @@
+ldp-neighbor:
+    - command: show ldp neighbor
+    - iterate:
+        xpath: 'ldp-neighbor'
+        id: './interface-name'
+        tests:
+        - list-not-less: interface-name
+          err: 'ldp interface gone missing: {{id_0}} going to {{pre["ldp-neighbor-address"]}}'
+          info: 'all ldp neighbors are ok {{id_0}} ' 
+    

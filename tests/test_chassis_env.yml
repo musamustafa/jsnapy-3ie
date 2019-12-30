@@ -1,0 +1,10 @@
+check_environment:
+    - command: show chassis environment
+    - iterate:
+        xpath: /environment-information/environment-item 
+        id: ./name
+        tests:
+        - no-diff: status
+          err: "Test Failed!!! states of \"{{pre['name']}}\" are not all same!!, earlier it was <{{pre['status']}}> and now its <{{post['status']}}>"
+          info: "Test Succeeded!! states of \"{{post['name']}}\" are all same, it is now <{{post['status']}}>!!!"
+    

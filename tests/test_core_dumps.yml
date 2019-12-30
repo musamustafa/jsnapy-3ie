@@ -1,0 +1,10 @@
+check_core:
+    - command: show system core-dumps routing-engine both
+    - iterate:
+        xpath: '//multi-routing-engine-results/multi-routing-engine-item/directory-list/directory/file-information' 
+        id: './file-name'
+        tests:
+        - list-not-more: file-name
+          err: "Test Failed!!there is new core file <{{id_0}}> on {{post['../../../re-name']}}"
+          info: "Test Succeeded!!!There are no new core files, {{id_0}} in <{{post['../../../re-name']}}> already existed"
+    

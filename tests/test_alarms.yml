@@ -1,0 +1,9 @@
+alarm-checks:
+    - command: show chassis alarms
+    - iterate:
+        xpath: 'alarm-detail' 
+        id: 'alarm-description'
+        tests:
+        - list-not-more: 'alarm-description'
+          info: "Test Succeeded!! chassis alarms <{{id_0}}> already  exist" 
+          err: "Test Failed!!!There is new chassis alarms <{{id_0}}> "
