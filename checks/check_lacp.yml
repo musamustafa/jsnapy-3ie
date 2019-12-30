@@ -1,0 +1,9 @@
+lacp:
+    - command:  show lacp interfaces
+    - iterate:
+        xpath: lacp-interface-information/lag-lacp-protocol
+        id: ./name
+        tests:
+          - is-equal: lacp-mux-state, Collecting distributing
+            err: 'FAIL !! {{id_0}} member of {{pre["./../lag-lacp-header/aggregate-name"]}} is {{pre["lacp-mux-state"]}}'
+            info: 'Success !! {{id_0}} member of {{pre["./../lag-lacp-header/aggregate-name"]}} is {{pre["lacp-mux-state"]}}'

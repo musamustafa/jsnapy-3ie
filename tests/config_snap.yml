@@ -18,4 +18,3 @@ tests:
   - test_route_summary_delta.yml
   - test_arp.yml
   - test_bfd.yml
-  - test_config.yml

@@ -1,6 +1,13 @@
 hosts:
   - device: tc0q10k01
+  - device: tc0q10k02
+  - device: dn2q10k01
+  - device: dn2q10k02
+  - device: dn2e9201
+  - device: dn2e9202
+  - device: dn2m4802
+  - device: dn2m4804
 
 
 tests:
-  - test_cos.yml
+  - test_config.yml

@@ -1,0 +1,6 @@
+hosts:
+    - device: tc0q10k01
+  
+  
+tests:
+    - check_lacp.yml

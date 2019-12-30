@@ -1,0 +1,4 @@
+QFX:
+- tc0q10k01:
+    ssh_config: "C:\\Users\\MABDIN\\.ssh\\config"
+    port: 22

@@ -1,0 +1,10 @@
+forwarding-table:
+    - command: show route forwarding-table summary
+    - iterate:
+        xpath: route-table
+        id: ./table-name
+        tests:
+          - delta: route-table-summary/route-count, 20%
+            err: 'FAIL !! {{id_0}} on {{pre["./../table-name"]}} was {{pre["route-count"]}} and became {{post["route-count"]}}'
+            info: 'Success !! {{id_0}} on {{pre["./../table-name"]}} was {{pre["route-count"]}} and stayed {{post["route-count"]}}'
+            

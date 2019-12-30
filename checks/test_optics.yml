@@ -1,0 +1,13 @@
+test_interface_optics:
+    - command: show interfaces diagnostics optics
+    - iterate:
+        id: lane-index
+        xpath: ./physical-interface/optics-diagnostics/optics-diagnostics-lane-values
+        tests:
+          - is-equal: laser-rx-power-low-alarm, off
+            err:  "Test Failed !! laser out put power for {{pre['../../name']}} lane number {{id_0}} is {{pre['laser-rx-optical-power']}} "
+            info:  "Test Succeeded !!"
+
+
+   
+   
