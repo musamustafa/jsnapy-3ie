@@ -10,11 +10,19 @@ hosts:
 
 
 tests:
-  - test_ifd_status.yml
-  - test_ifl_status.yml
-  - test_ospf_neighbor.yml
-  - test_isis_adj.yml
-  - test_bgp_neighbor.yml
-  - test_route_summary_delta.yml
+  - test_alarms.yml
   - test_arp.yml
   - test_bfd.yml
+  - test_bgp_neighbor.yml
+  - test_chassis_env.yml
+  - test_chassis_hw.yml
+  - test_core_dumps.yml
+  - test_forwarding_table.yml
+  - test_ifd_status.yml
+  - test_ifl_status.yml
+  - test_isis_adj.yml
+  - test_lacp.yml
+  - test_ldp.yml
+  - test_ospf_neighbor.yml
+  - test_pic_status.yml
+  - test_route_summary_delta.yml
