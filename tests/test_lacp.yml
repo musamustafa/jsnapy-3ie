@@ -6,4 +6,4 @@ lacp:
         tests:
           - no-diff: lacp-mux-state
             err: 'FAIL !! {{id_0}} member of {{pre["./../lag-lacp-header/aggregate-name"]}} was {{pre["lacp-mux-state"]}} and and became {{post["lacp-mux-state"]}}'
-            info: 'Success !! {{id_0}} member of {{pre["./../lag-lacp-header/aggregate-name"]}} was {{pre["lacp-mux-state"]}} and and became {{post["lacp-mux-state"]}}'
+            info: 'Success !! {{id_0}} member of {{pre["./../lag-lacp-header/aggregate-name"]}} was {{pre["lacp-mux-state"]}} and and stayed {{post["lacp-mux-state"]}}'

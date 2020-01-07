@@ -1,10 +1,10 @@
 forwarding-table:
-    - command: show route forwarding-table summary
+    - command: show route forwarding-table summary family inet
     - iterate:
-        xpath: route-table
-        id: ./table-name
+        xpath: //route-table/route-table-summary[normalize-space(route-table-type) = "user"]
+        id: ../table-name
         tests:
-          - delta: route-table-summary/route-count, 20%
-            err: 'FAIL !! {{id_0}} on {{pre["./../table-name"]}} was {{pre["route-count"]}} and became {{post["route-count"]}}'
-            info: 'Success !! {{id_0}} on {{pre["./../table-name"]}} was {{pre["route-count"]}} and stayed {{post["route-count"]}}'
+          - delta: route-count, 20%
+            err: 'FAIL !! routes on {{id_0}} were {{pre["route-count"]}} and changed to {{post["route-count"]}}'
+            info: 'Success !! routes on {{id_0}} were {{pre["route-count"]}} and stayed {{post["route-count"]}}'
             

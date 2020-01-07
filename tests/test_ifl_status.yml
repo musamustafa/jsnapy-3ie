@@ -5,9 +5,9 @@ test_ifl_terse:
      xpath: physical-interface/logical-interface
      tests:
        - no-diff: oper-status
-         err:  "Test Failed !! admin-status is not equal to for {{id_0}}, it was  <{{pre['oper-status']}}> and changed to  <{{post['oper-status']}}>"
-         info:  "Test Succeeded !! for {{id_0}} admin-status is equal to <{{pre['oper-status']}}> with oper-status  <{{pre['oper-status']}}>"
+         err:  "Test Failed !! oper-status is not equal to for {{id_0}}, it was  <{{pre['oper-status']}}> and changed to  <{{post['oper-status']}}>"
+         info:  "Test Succeeded !! for {{id_0}} oper-status was <{{pre['oper-status']}}> and stayed  <{{post['oper-status']}}>"
 
        - no-diff: admin-status
          err:  "Test Failed !! admin-status is not equal to for {{id_0}}, it was  <{{pre['admin-status']}}> and changed to  <{{post['admin-status']}}>"
-         info:  "Test Succeeded !! for {{id_0}} admin-status is equal to <{{pre['admin-status']}}> with oper-status  <{{pre['admin-status']}}>"
+         info:  "Test Succeeded !! for {{id_0}} admin-status is was <{{pre['admin-status']}}> and stayed  <{{post['admin-status']}}>"

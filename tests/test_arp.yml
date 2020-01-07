@@ -2,8 +2,8 @@ arp:
 - command:  show arp
 - iterate:
     xpath: arp-table-entry
-    id: ./mac-address
+    id: ./ip-address
     tests:
       - no-diff: interface-name
         err: 'FAIL !! {{id_0}} was on  {{pre["interface-name"]}} and moved to {{post["interface-name"]}}'
-        info: 'all is ok'
+        info: 'Success !! IP address {{id_0}} stayed on {{post["interface-name"]}}'

@@ -7,8 +7,8 @@ bfd-sessions:
       - AND:
         - no-diff: session-state
           err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-state"]}} and became {{post["session-state"]}}'
-          info: 'all is ok'
+          info: 'Success !! BFD session to {{id_0}} was {{pre["session-state"]}} and stayed {{post["session-state"]}}'
 
         - no-diff: session-detection-time
-          err: 'FAIL !! BFD session to {{id_0}} was {{pre["session-detection-time"]}} and became {{post["session-detection-time"]}}'
-          info: 'all is ok'
+          err: 'FAIL !! BFD session timer to {{id_0}} was {{pre["session-detection-time"]}} and became {{post["session-detection-time"]}}'
+          info: 'Success !! BFD session timer to {{id_0}} was {{pre["session-detection-time"]}} and stayed {{post["session-detection-time"]}}'

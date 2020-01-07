@@ -3,4 +3,4 @@ hosts:
   
   
 tests:
-    - test_lacp.yml
+    - test_forwarding_table.yml
