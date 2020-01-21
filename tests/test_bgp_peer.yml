@@ -1,0 +1,9 @@
+bgp_peer:
+    - command:  show bgp neighbor
+    - iterate:
+        xpath: bgp-peer
+        id: peer-address
+        tests:
+          - no-diff: peer-state
+            err: 'FAIL !! BGP peer{{id_0}} on interface {{pre["local-interface-name"]}} with description: {{pre["description"]}} on rti: {{pre["peer-cfg-rti"]}} was {{pre["peer-state"]}} changed to {{post["peer-state"]}}'
+            info: 'Success !!'
