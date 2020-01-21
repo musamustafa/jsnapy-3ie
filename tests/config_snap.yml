@@ -7,6 +7,8 @@ hosts:
   - device: dn2e9202
   - device: dn2m4802
   - device: dn2m4804
+  - device: bl0e9201
+  - device: bl0e9202
 
 
 tests:
@@ -14,6 +16,7 @@ tests:
   - test_arp.yml
   - test_bfd.yml
   - test_bgp_neighbor.yml
+  - test_bgp_peer.yml
   - test_chassis_env.yml
   - test_chassis_hw.yml
   - test_core_dumps.yml

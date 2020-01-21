@@ -3,4 +3,4 @@ hosts:
   
   
 tests:
-    - test_forwarding_table.yml
+    - test_bgp_peer.yml

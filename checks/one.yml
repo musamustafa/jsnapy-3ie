@@ -3,4 +3,4 @@ hosts:
   
   
 tests:
-    - check_lacp.yml
+    - test_bgp_peer.yml
